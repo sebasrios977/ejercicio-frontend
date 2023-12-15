@@ -1,0 +1,21 @@
+<div class="sidebar">
+  <div class="sidebar__icons">
+    <img src="assets/images/logo.svg" alt="logo" class="sidebar__logo">
+    <img
+      *ngIf="!isSidebarShown"
+      src="assets/images/icon-menu.svg"
+      alt="icon-menu"
+      class="sidebar__icon"
+      (click)="isSidebarShown = true"
+    >
+  </div>
+  <nav *ngIf="isSidebarShown" class="sidebar__menu">
+    <img
+      class="sidebar__close"
+      src=" assets/images/icon-menu-close.svg"
+      alt="cerrar menu"
+      (click)="isSidebarShown = false"
+    >
+    <a *ngFor="let item of sidebarItems" href="#" class="sidebar__item">{{item.name}}</a>
+  </nav>
+</div>

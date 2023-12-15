@@ -1,0 +1,10 @@
+@use '/src/app/globales/mixins.scss' as m;
+@use '/src/app/globales/variables.scss' as v;
+
+
+.home {
+
+  &__image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+@use '/src/app/globales/mixins.scss' as m;
+@use '/src/app/globales/variables.scss' as v;
+
+.sidebar {
+
+  position: relative;
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__menu {
+    animation: slideToRight 0.2s ease-in-out;
+    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 80px 20% 0 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: v.$offWhite;
+    height: 100vh;
+    z-index: 100;
+  }
+
+  @keyframes slideToRight {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: v.$darkGrayishBlue;
+
+    &:hover {
+      color: v.$softRed;
+    }
+  }
+}

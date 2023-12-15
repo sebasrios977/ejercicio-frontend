@@ -1,0 +1,46 @@
+@use '/src/app/globales/mixins.scss' as m;
+@use '/src/app/globales/variables.scss' as v;
+
+.popular {
+
+  @include m.mq(v.$desktop){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  &__title {
+    color: v.$veryDarkBlue;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 10px 0;
+
+    @include m.mq(v.$desktop){
+      font-size: 50px;
+      margin: 0;
+    }
+  }
+
+
+  &__paragraph {
+    color: v.$darkGrayishBlue;
+    line-height: 30px;
+  }
+
+  &__button {
+    background-color: v.$softRed;
+    margin-top: 5px;
+    border: 0px;
+    padding: 15px 35px;
+    color: v.$offWhite;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      background-color: v.$veryDarkBlue;
+      color: v.$offWhite;
+    }
+  }
+}

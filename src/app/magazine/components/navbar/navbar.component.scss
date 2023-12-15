@@ -1,0 +1,27 @@
+@use '/src/app/globales/mixins.scss' as m;
+@use '/src/app/globales/variables.scss' as v;
+
+.navbar {
+
+  @include m.mq(v.$desktop){
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: v.$darkGrayishBlue;
+
+    &:hover {
+      color: v.$softRed;
+    }
+  }
+}

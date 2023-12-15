@@ -1,0 +1,58 @@
+@use '/src/app/globales/mixins.scss' as m;
+@use '/src/app/globales/variables.scss' as v;
+
+.new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: v.$veryDarkBlue;
+  padding: 15px;
+  margin-top: 45px;
+
+  @include m.mq(v.$desktop){
+    margin-top: 0;
+    height: calc(100% - 30px);
+  }
+
+  &__title {
+    font-size: 30px;
+    color: v.$softOrange;
+
+  }
+
+  &__container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__last .new__paragraph::after{
+    content: none;
+  }
+
+  &__heading {
+    color: v.$offWhite;
+    font-weight: 800;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: v.$softOrange;
+    }
+  }
+
+  &__paragraph {
+    color: v.$grayishBlue;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      border-top: 1px solid v.$grayishBlue;
+      margin-top: 30px;
+    }
+  }
+}

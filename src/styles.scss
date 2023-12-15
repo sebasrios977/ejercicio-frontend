@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@use './app/globales/variables.scss' as v;
+
+html {
+  font-family: v.$fuentePrimaria;
+}
+
+p {
+  font-size: 15px;
+}
+

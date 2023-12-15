@@ -1,0 +1,11 @@
+<div id="new" class="new">
+  <h2 class="new__title">New</h2>
+  <div
+    *ngFor="let newItem of newItems; let last = last"
+    class="new__container"
+    [class.new__last]="last"
+  >
+    <h3 class="new__heading">{{newItem.title}}</h3>
+    <p class="new__paragraph">{{newItem.paragraph}}</p>
+  </div>
+</div>
