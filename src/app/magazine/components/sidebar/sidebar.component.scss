@@ -17,8 +17,7 @@
 
   &__menu {
     animation: slideToRight 0.2s ease-in-out;
-    position: relative;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     padding: 80px 20% 0 20px;
@@ -41,8 +40,8 @@
 
   &__close {
     position: absolute;
-    right: 0;
-    top: 20px;
+    right: 20px;
+    top: 30px;
     width: 30px;
     cursor: pointer;
   }
